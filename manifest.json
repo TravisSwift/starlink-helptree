@@ -1,0 +1,13 @@
+{
+  "manifest_version": 3,
+  "name": "Starlink Help Tree",
+  "version": "0.1.0",
+  "action": {
+    "default_title": "Help Tree",
+    "default_popup": "popup.html"
+  },
+  "default_icon": {
+    "128": "icon.png"
+  },
+  "permissions": []
+}
