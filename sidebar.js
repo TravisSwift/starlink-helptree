@@ -11,54 +11,78 @@ const tree = {
   ],
 
   billing: [
-    { name: "Payments",                  key: "billing-payments",         type: "macro" },
-    { name: "Suspension",                key: "billing-suspension",       type: "macro" },
-    { name: "Failed Payments",           key: "billing-failed-payments",  type: "macro" },
-    { name: "Failed to update payment",  key: "billing-failed-update",    type: "macro" }
-  ],
-
-  troubleshooting: [
-    { name: "PreCheck and Troubleshooting Template", key: "troubleshooting-precheck", type: "macro" },
-    { name: "Factory Resets",                        key: "troubleshooting-factory-reset", type: "macro" },
-    { name: "Reboot Gen 2 Kit",                      key: "troubleshooting-reboot-gen2", type: "macro" }
+    { name: "Change Service Plans",      key: "billing-change-plan",      type: "macro" },
+    { name: "Update Service Address",    key: "billing-update-address",   type: "macro" },
+    { name: "Transfer a Kit",            key: "billing-transfer-kit",     type: "macro" },
+    { name: "Credit Referral",           key: "billing-credit-referral",  type: "macro" }
   ],
 
   promotions: [
-    { name: "Current Promotions", key: "promotions-current", type: "macro" }
+    { name: "Credit Referral",           key: "promotions-credit-referral", type: "macro" },
+    { name: "Authorized Retailers",      key: "promotions-authorized-retailers", type: "macro" }
   ],
 
   sales: [
-    { name: "New Customer Inquiries", key: "sales-new", type: "macro" }
+    { name: "Add a User",                key: "sales-add-user",           type: "macro" },
+    { name: "New Kit Activation",        key: "sales-new-kit-activation", type: "macro" },
+    { name: "Links to Products",         key: "sales-product-links",      type: "macro" }
   ],
 
   shipping: [
-    { name: "Shipping Status", key: "shipping-status", type: "macro" },
-    { name: "Delayed Package", key: "shipping-delayed", type: "macro" }
+    { name: "Kit Returns",               key: "shipping-kit-returns",     type: "macro" },
+    { name: "How to Stow",               key: "shipping-how-to-stow",     type: "macro" },
+    { name: "Return Label",              key: "shipping-return-label",    type: "macro" }
+  ],
+
+  troubleshooting: [
+    { name: "Create Wi-Fi Name and Password", key: "troubleshooting-wifi-setup", type: "macro" },
+    { name: "Factory Reset",                  key: "troubleshooting-factory-reset", type: "macro" },
+    { name: "Split the Bands",                key: "troubleshooting-split-bands", type: "macro" },
+    { name: "Standby Mode",                   key: "troubleshooting-standby-mode", type: "macro" },
+    { name: "Advanced Speed Tests",           key: "troubleshooting-advanced-speed-tests", type: "macro" },
+    { name: "Call Ping",                      key: "troubleshooting-call-ping", type: "macro" },
+    { name: "After Hours",                    key: "troubleshooting-after-hours", type: "macro" }
   ]
 };
 
 const macros = {
-  "billing-payments": "To check or manage payments:\n\n1. Log into your Starlink account at starlink.com\n2. Go to the Billing section\n3. View payment history and upcoming charges",
+  "billing-change-plan": "To change service plans:\n\n1. Log into your Starlink account\n2. Go to Manage Subscription\n3. Select the new plan and confirm the change",
 
-  "billing-suspension": "Account suspension info:\n\nCommon causes: failed payments.\nTo resolve:\n1. Log in and clear any overdue balance\n2. Update payment method\n3. Wait up to 24 hours for reactivation",
+  "billing-update-address": "To update service address:\n\n1. Log into your Starlink account\n2. Go to Service Address\n3. Update the address and submit for approval",
 
-  "billing-failed-payments": "Failed payment troubleshooting:\n\n1. Confirm card has funds and is not expired\n2. Try a different payment method\n3. Contact your bank if needed",
+  "billing-transfer-kit": "To transfer a kit:\n\n1. Log into both accounts\n2. Go to Transfer Kit section\n3. Enter the kit ID and follow the instructions",
 
-  "billing-failed-update": "Unable to update payment method:\n\n1. Try incognito window\n2. Clear browser cache & cookies\n3. Use a different browser",
+  "billing-credit-referral": "Credit Referral:\n\nRefer a friend through your account dashboard to receive service credit once they activate.",
 
-  "troubleshooting-precheck": "Pre-check & Troubleshooting Template:\n\n1. Power cycle router and dish\n2. Check router light status\n3. Confirm no obstructions\n4. Run speed test in app\n5. Note any error codes",
+  "promotions-credit-referral": "Credit Referral Program:\n\nLog into your account → Referrals section to generate your referral link.",
 
-  "troubleshooting-factory-reset": "Factory Reset Instructions:\n\nRouter: Hold reset button 10+ seconds until lights flash.\nDish: Usually via app under Advanced → Factory Reset.\n\nRe-setup required after reset.",
+  "promotions-authorized-retailers": "Authorized Retailers:\n\nOnly purchase Starlink kits from the official Starlink website or authorized retailers to ensure full warranty coverage.",
 
-  "troubleshooting-reboot-gen2": "Reboot Gen 2 Kit Instructions:\n\n1. Unplug the kit from the power source.\n2. Wait 10 seconds.\n3. Plug it back in.\n\nRepeat this process **six times in a row**.\n\nAfter the sixth reboot, wait for the router light to turn solid white before testing the connection again.",
+  "sales-add-user": "To add a user:\n\n1. Log into your Starlink account\n2. Go to Users & Access\n3. Invite new user by email",
 
-  "promotions-current": "Current promotions and offers can be found in your Starlink account dashboard.",
+  "sales-new-kit-activation": "New Kit Activation:\n\n1. Plug in the new kit\n2. Download the Starlink app\n3. Follow the on-screen activation steps",
 
-  "sales-new": "For new customer sales inquiries, direct them to https://www.starlink.com",
+  "sales-product-links": "Product Links:\n\n• Standard Kit → https://www.starlink.com\n• Mini Kit → https://www.starlink.com/mini\n• High Performance Kit → Contact sales team",
 
-  "shipping-status": "To check shipping status:\n1. Log into your Starlink account\n2. Go to Orders / Shipping section\n3. Use the tracking number provided",
+  "shipping-kit-returns": "Kit Returns Process:\n\n1. Log into your account\n2. Go to Orders → Return Kit\n3. Follow the instructions to generate a return label",
 
-  "shipping-delayed": "For delayed shipping:\n1. Check tracking in your account\n2. Allow extra time during high-demand periods\n3. Contact support if no update"
+  "shipping-how-to-stow": "How to Stow the Kit:\n\n1. Power down the system completely\n2. Carefully fold the dish\n3. Pack all components securely in the original packaging",
+
+  "shipping-return-label": "To get a return label:\n\nLog into your Starlink account → My Orders → select the kit → Request Return → print the provided label",
+
+  "troubleshooting-wifi-setup": "Create Wi-Fi Name and Password:\n\n1. Open the Starlink app\n2. Go to Settings → Wi-Fi\n3. Set your custom network name and strong password\n4. Apply changes",
+
+  "troubleshooting-factory-reset": "Factory Reset:\n\nRouter: Hold the reset button for 10+ seconds until the lights flash.\nAfter reset, reconfigure using the Starlink app.",
+
+  "troubleshooting-split-bands": "Split the Bands (2.4GHz / 5GHz):\n\nIn Starlink app: Settings → Wi-Fi → Advanced → Enable Separate Bands",
+
+  "troubleshooting-standby-mode": "Standby Mode:\n\nIn Starlink app: Settings → Advanced → Standby Mode (toggle on/off)",
+
+  "troubleshooting-advanced-speed-tests": "Advanced Speed Tests:\n\nUse the Starlink app → Run multiple speed tests at different times of day for best results.",
+
+  "troubleshooting-call-ping": "Call Ping Test:\n\nIn Starlink app: Settings → Advanced → Run Ping Test to check latency and packet loss",
+
+  "troubleshooting-after-hours": "After Hours Support:\n\nFor urgent issues outside business hours, use the in-app chat or submit a ticket."
 };
 
 function renderLevel(levelKey) {
@@ -102,31 +126,27 @@ function showMacroPreview(title, originalText) {
     <div id="back-from-preview" style="margin-bottom: 15px; color: #0af; cursor: pointer;">← Back to list</div>
     <h2 style="margin: 10px 0 15px 0; color: #fff;">${title}</h2>
     
-    <textarea id="macro-text" style="width: 100%; height: 380px; background: #2d2d2d; color: #ddd; border: 1px solid #555; border-radius: 8px; padding: 14px; font-family: system-ui; font-size: 15px; line-height: 1.5; resize: vertical;">${originalText}</textarea>
+    <textarea id="macro-text" spellcheck="false"
+      style="width: 100%; height: 420px; background: #2d2d2d; color: #ddd; border: 1px solid #555; 
+             border-radius: 8px; padding: 14px; font-family: system-ui; font-size: 15px; 
+             line-height: 1.5; resize: vertical;">${originalText}</textarea>
     
-    <button id="copy-btn" style="margin-top: 15px; padding: 14px 24px; background: #0b0; color: white; border: none; border-radius: 6px; font-size: 16px; cursor: pointer; width: 100%;">
-      Copy Edited Text to Clipboard
+    <button id="copy-btn" style="margin-top: 15px; padding: 14px 24px; background: #0b0; color: white; 
+             border: none; border-radius: 6px; font-size: 16px; cursor: pointer; width: 100%;">
+      Copy to Clipboard
     </button>
+    
+    <div style="margin-top: 12px; font-size: 13px; color: #aaa; text-align: center;">
+      Text copied → Switch to your document and press <strong>Ctrl + V</strong>
+    </div>
   `;
 
-  // Back button
-  document.getElementById('back-from-preview').addEventListener('click', () => {
-    renderLevel(currentLevel);
-  });
+  const textarea = document.getElementById('macro-text');
 
-  // Copy button - copies whatever is in the textarea (edited or not)
+  document.getElementById('back-from-preview').addEventListener('click', () => renderLevel(currentLevel));
+
   document.getElementById('copy-btn').addEventListener('click', () => {
-    const editedText = document.getElementById('macro-text').value;
-    
-    navigator.clipboard.writeText(editedText).then(() => {
-      showToast("✅ Copied to clipboard!");
-      // Auto return to list after copy (optional - remove setTimeout if you want to stay)
-      setTimeout(() => {
-        renderLevel(currentLevel);
-      }, 1000);
-    }).catch(() => {
-      alert("Failed to copy to clipboard");
-    });
+    navigator.clipboard.writeText(textarea.value);
   });
 }
 
@@ -136,23 +156,6 @@ function goBack() {
     document.getElementById('title').textContent = currentLevel === 'main' ? 'Help Center' : currentLevel.charAt(0).toUpperCase() + currentLevel.slice(1).replace(/-/g, ' ');
     renderLevel(currentLevel);
   }
-}
-
-function showToast(message = "✅ Copied to clipboard!") {
-  let toast = document.getElementById('toast');
-  if (!toast) {
-    toast = document.createElement('div');
-    toast.id = 'toast';
-    toast.style.cssText = `
-      position: fixed; bottom: 30px; left: 50%; transform: translateX(-50%);
-      background: #0b0; color: white; padding: 12px 24px; border-radius: 8px;
-      font-size: 14px; box-shadow: 0 4px 12px rgba(0,0,0,0.5); z-index: 1000;
-    `;
-    document.body.appendChild(toast);
-  }
-  toast.textContent = message;
-  toast.style.display = 'block';
-  setTimeout(() => { toast.style.display = 'none'; }, 2200);
 }
 
 // Initial render
