@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Help Tree</title>
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <div class="trigger">
+    <span class="trigger-icon">?</span>
+  </div>
+  <div class="slider" id="helpSlider">
+    <h2>Help Center</h2>
+    <div class="category">
+      <h3 class="category-title" onclick="toggleCategory(this)">Technical Support</h3>
+      <div class="category-content">
+        <p onclick="selectMacro(this)">My app is crashing. What should I do?</p>
+        <p onclick="selectMacro(this)">How to clear cache?</p>
+        <div class="subcategory">
+          <h4 onclick="toggleSubcategory(this)">Connectivity Issues</h4>
+          <div class="subcategory-content">
+            <p onclick="selectMacro(this)">Wi-Fi not connecting.</p>
+            <p onclick="selectMacro(this)">Bluetooth pairing failed.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="category">
+      <h3 class="category-title" onclick="toggleCategory(this)">Billing</h3>
+      <div class="category-content">
+        <p onclick="selectMacro(this)">How to update payment method?</p>
+        <p onclick="selectMacro(this)">Refund request process.</p>
+      </div>
+    </div>
+    <div class="category">
+      <h3 class="category-title" onclick="toggleCategory(this)">General FAQs</h3>
+      <div class="category-content">
+        <p onclick="selectMacro(this)">How to create an account?</p>
+        <p onclick="selectMacro(this)">Where to find user manuals?</p>
+      </div>
+    </div>
+  </div>
+  <script src="popup.js"></script>
+  <script src="sidebar.js"></script>
+</body>
+</html>

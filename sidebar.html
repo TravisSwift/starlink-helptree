@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Starlink Help Tree</title>
+  <style>
+    body {
+      font-family: system-ui, -apple-system, sans-serif;
+      padding: 16px;
+      background: #1e1e1e;
+      color: #ddd;
+      margin: 0;
+      line-height: 1.5;
+    }
+    h1 {
+      margin: 0 0 20px 0;
+      color: #fff;
+      font-size: 22px;
+    }
+    .back {
+      color: #0af;
+      cursor: pointer;
+      margin-bottom: 15px;
+      display: inline-block;
+    }
+    .category {
+      padding: 12px 8px;
+      color: #ccc;
+      cursor: pointer;
+      border-radius: 4px;
+      transition: background 0.2s;
+    }
+    .category:hover {
+      background: #333;
+      color: #fff;
+    }
+    .toast {
+      position: fixed;
+      bottom: 30px;
+      left: 50%;
+      transform: translateX(-50%);
+      background: #0b0;
+      color: white;
+      padding: 12px 24px;
+      border-radius: 8px;
+      font-size: 14px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.5);
+      display: none;
+      z-index: 1000;
+    }
+    .toast.show {
+      display: block;
+    }
+  </style>
+</head>
+<body>
+  <h1 id="title">Help Center</h1>
+  <div id="content"></div>
+  
+  <div id="toast" class="toast">✅ Copied to clipboard!</div>
+
+  <script src="sidebar.js"></script>
+</body>
+</html> 
