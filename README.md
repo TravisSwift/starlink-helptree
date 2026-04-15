@@ -6,8 +6,7 @@
 
 **Starlink Help Tree** is a browser extension designed to dramatically improve agent efficiency and response consistency. 
 
-Instead of agents wasting time searching through scattered documents, wikis, or old tickets, they now have instant access to approved, high-quality responses without leaving their browser — with one click.
-
+Instead of agents wasting time searching through scattered documents, One Note, or using Hot Keys, they now have instant access to approved, high-quality responses without leaving their browser — with one click
 ### Key Benefits
 
 - **Significant Time Savings**  
