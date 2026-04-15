@@ -4,9 +4,9 @@
 
 ### Overview
 
-**Starlink Help Tree** is a Chrome browser extension designed to dramatically improve agent efficiency and response consistency. 
+**Starlink Help Tree** is a browser extension designed to dramatically improve agent efficiency and response consistency. 
 
-Instead of agents wasting time searching through scattered documents, wikis, or old tickets, they now have instant access to approved, high-quality responses directly in their browser — with one click.
+Instead of agents wasting time searching through scattered documents, wikis, or old tickets, they now have instant access to approved, high-quality responses without leaving their browser — with one click.
 
 ### Key Benefits
 
@@ -14,13 +14,14 @@ Instead of agents wasting time searching through scattered documents, wikis, or 
   Agents no longer need to hunt for correct replies. Pre-approved macros are available instantly, directly increasing **responses per hour** — a core productivity metric.
 
 - **Unified & Consistent Messaging**  
-  All agents use the exact same wording and quality standards. Updates are managed centrally (by updating the extension), ensuring every customer receives consistent, professional responses.
+  All agents use the exact same wording and quality standards. Updates are managed centrally (by updating the extension), ensuring every customer receives consistent, accurate responses.
 
 - **Editable & Flexible**  
-  Agents can customize responses in the moment (for specific customer situations) before copying or pasting.
+  Agents can customize responses in the moment (for specific customer situations) before copying or pasting, the ability to personalize each reply is enhanced.
 
 - **Fast Workflow**  
   One-click copy to clipboard + clear instructions for quick pasting into any system (Zendesk, Google Docs, email, chat, etc.).
+
 
 ### Features
 
@@ -59,7 +60,8 @@ The side panel will open when you click the Starlink Help Tree icon.
 
 - Auto-update mechanism for macros
 - Search functionality across all responses
-- Integration with Zendesk / support platforms
+- On-click paste instead of copy-paste
+- Integration with Support Agent 
 - Usage analytics (most-used macros, time saved, etc.)
 - Dark/Light mode toggle
 

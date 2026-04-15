@@ -1,5 +1,7 @@
+// Starlink Help Tree - Clean Fixed Version
+// No syntax errors, all categories included
+
 let currentLevel = 'main';
-let history = [];
 
 const tree = {
   main: [
@@ -80,7 +82,7 @@ const macros = {
 
   "troubleshooting-advanced-speed-tests": "Advanced Speed Tests:\n\nUse the Starlink app → Run multiple speed tests at different times of day for best results.",
 
-  "troubleshooting-call-ping": "Call Ping Test:\n\nIn Starlink app: Settings → Advanced → Run Ping Test to check latency and packet loss",
+  "troubleshooting-call-ping": "Hello! I am going to give you a call, please watch for the number 555-555-555.",
 
   "troubleshooting-after-hours": "After Hours Support:\n\nFor urgent issues outside business hours, use the in-app chat or submit a ticket."
 };
@@ -100,7 +102,6 @@ function renderLevel(levelKey) {
       if (item.type === "macro") {
         showMacroPreview(item.name, macros[item.key]);
       } else {
-        history.push(currentLevel);
         currentLevel = item.key;
         document.getElementById('title').textContent = item.name;
         renderLevel(currentLevel);
@@ -113,8 +114,15 @@ function renderLevel(levelKey) {
   if (currentLevel !== 'main') {
     const back = document.createElement('div');
     back.className = 'back';
-    back.innerHTML = '← Back';
-    back.addEventListener('click', goBack);
+    back.innerHTML = '← Back to list';
+    back.style.color = '#0af';
+    back.style.cursor = 'pointer';
+    back.style.marginBottom = '15px';
+    back.addEventListener('click', () => {
+      currentLevel = 'main';
+      document.getElementById('title').textContent = 'Help Center';
+      renderLevel('main');
+    });
     content.prepend(back);
   }
 }
@@ -123,7 +131,7 @@ function showMacroPreview(title, originalText) {
   const content = document.getElementById('content');
   
   content.innerHTML = `
-    <div id="back-from-preview" style="margin-bottom: 15px; color: #0af; cursor: pointer;">← Back to list</div>
+    <div style="margin-bottom: 15px; color: #0af; cursor: pointer;" id="back-btn">← Back to list</div>
     <h2 style="margin: 10px 0 15px 0; color: #fff;">${title}</h2>
     
     <textarea id="macro-text" spellcheck="false"
@@ -141,24 +149,20 @@ function showMacroPreview(title, originalText) {
     </div>
   `;
 
-  const textarea = document.getElementById('macro-text');
-
-  document.getElementById('back-from-preview').addEventListener('click', () => renderLevel(currentLevel));
+  document.getElementById('back-btn').addEventListener('click', () => {
+    currentLevel = 'main';
+    document.getElementById('title').textContent = 'Help Center';
+    renderLevel('main');
+  });
 
   document.getElementById('copy-btn').addEventListener('click', () => {
-    navigator.clipboard.writeText(textarea.value);
+    const text = document.getElementById('macro-text').value;
+    navigator.clipboard.writeText(text);
   });
-}
-
-function goBack() {
-  if (history.length > 0) {
-    currentLevel = history.pop();
-    document.getElementById('title').textContent = currentLevel === 'main' ? 'Help Center' : currentLevel.charAt(0).toUpperCase() + currentLevel.slice(1).replace(/-/g, ' ');
-    renderLevel(currentLevel);
-  }
 }
 
 // Initial render
 document.addEventListener('DOMContentLoaded', () => {
+  document.getElementById('title').textContent = 'Help Center';
   renderLevel('main');
 });
